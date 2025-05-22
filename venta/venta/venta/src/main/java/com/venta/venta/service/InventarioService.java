@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class InventarioService {
 
     private final InventarioRepository inventarioRepository;
