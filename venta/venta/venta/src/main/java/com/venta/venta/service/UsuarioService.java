@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
