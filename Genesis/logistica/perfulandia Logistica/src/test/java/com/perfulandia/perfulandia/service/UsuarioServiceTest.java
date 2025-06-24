@@ -24,7 +24,7 @@ public class UsuarioServiceTest {
         usuarioService = new UsuarioService();
 
         usuario = new Usuario();
-        usuario.setId(1);
+        usuario.setId(1L);;
         usuario.setNombre("Camila");
         usuario.setCorreo("cami@gmail.com");
         usuario.setContrasena("1234");
@@ -50,7 +50,7 @@ public class UsuarioServiceTest {
 
     @Test
     void testActualizarUsuario() {
-        Usuario actualizado = new Usuario(1, "Camila Actualizada", "cami@gmail.com", "5678",
+        Usuario actualizado = new Usuario(1L, "Camila Actualizada", "cami@gmail.com", "5678",
                 Usuario.EstadoUsuario.ACTIVO, List.of("LECTURA"));
 
         usuarioService.actualizarUsuario(1, actualizado);

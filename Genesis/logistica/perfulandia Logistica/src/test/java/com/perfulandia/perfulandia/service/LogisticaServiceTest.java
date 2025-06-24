@@ -90,7 +90,7 @@ public class LogisticaServiceTest {
             logisticaService.guardarEnvio(envio);
         });
 
-        assertEquals("Provvedor no encontrado", ex.getMessage());
+        assertEquals("Proveedor no encontrado", ex.getMessage());
     }
 
     @Test

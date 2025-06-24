@@ -37,7 +37,7 @@ public class UsuarioControllerTest {
     @BeforeEach
     void setUp(){
         usuario = new Usuario();
-        usuario.setId(1);
+        usuario.setId(1L);;
         usuario.setNombre("Camila");
         usuario.setCorreo("cami@gmail.com");
         usuario.setContrasena("1234");
@@ -114,7 +114,7 @@ public class UsuarioControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(login)))
             .andExpect(status().isOk())
-            .andExpect(content().string("Login Exitoso"));
+            .andExpect(content().string("Login exitoso"));
     }
 
     @Test

@@ -14,7 +14,7 @@ public class UsuarioTest {
     @Test
     public void testUsuarioGettersAndSetters() {
         Usuario usuario = new Usuario();
-        usuario.setId(1);
+        usuario.setId(1L);;
         usuario.setNombre("Genesis");
         usuario.setCorreo("genesis@correo.cl");
         usuario.setContrasena("1234");

@@ -67,7 +67,7 @@ public class LogisticaControllerTest {
         mockMvc.perform(get("/logistica/envios"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$[0].idEnvio").value(1))
-            .andExpect(jsonPath("$[0].estado").value("EN CAMINO"))
+            .andExpect(jsonPath("$[0].estado").value("EN TRANSITO"))
             .andExpect(jsonPath("$[0].proveedor.nombre").value("Proveedor Uno"))
             .andExpect(jsonPath("$[0].rutaEntrega.origen").value("Santiago"));
     }
@@ -81,7 +81,7 @@ public class LogisticaControllerTest {
                 .content(objectMapper.writeValueAsString(envio)))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.idEnvio").value(1))
-            .andExpect(jsonPath("$.estado").value("EN CAMINO"));
+            .andExpect(jsonPath("$.estado").value("EN TRANSITO"));
     }
 
     @Test
@@ -121,7 +121,7 @@ public class LogisticaControllerTest {
         mockMvc.perform(get("/logistica/rutas"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$[0].origen").value("Santiago"))
-            .andExpect(jsonPath("$[0].destino").value("Valparaíso"));
+            .andExpect(jsonPath("$[0].destino").value("Valparaiso"));
     }
 
     @Test
@@ -134,6 +134,6 @@ public class LogisticaControllerTest {
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.idRuta").value(1))
             .andExpect(jsonPath("$.origen").value("Santiago"))
-            .andExpect(jsonPath("$.destino").value("Valparaíso"));
+            .andExpect(jsonPath("$.destino").value("Valparaiso"));
     }
 }
